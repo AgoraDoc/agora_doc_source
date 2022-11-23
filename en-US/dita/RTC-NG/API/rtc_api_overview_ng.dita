@@ -1198,7 +1198,7 @@
         <section id="spatial_audio" props="android ios unity">
             <title>Spatial audio effect</title>
             <note type="attention">
-            <p>This feature is in experimental status. To<xref keyref="mailto-link"/> enable it, contact , contact  if needed<xref keyref="ticket-link"/>.</p>
+            <p>This feature is in experimental status. To enable it, contact <xref keyref="mailto-link"/>, contact <xref keyref="ticket-link"/> if needed.</p>
             </note> <simpletable props="hide">
             <sthead>
                 <stentry>Cloud server calculation methods</stentry>
@@ -2026,7 +2026,7 @@
             </simpletable> </section>
         <section id="audio_routing_control" props="android ios cpp unity flutter rn">
             <title>Audio route</title>
-            <p props="cpp flutter">This method is for Android and iOS only.</p>
+            <p props="cpp flutter">This group of method is for Android and iOS only.</p>
             <simpletable id="simpletable_ns1_shw_jqb">
             <sthead>
                 <stentry>Method</stentry>
@@ -2444,7 +2444,7 @@
         <section props="cpp mac unity flutter electron" id="miscellaneous_audio_control">
             <title>Miscellaneous audio control</title>
             <note props="cpp unity flutter electron" type="attention">
-            <p>This method is for Windows and macOS only.</p>
+            <p>This group of method is for Windows and macOS only.</p>
             </note> <simpletable id="simpletable_ct1_shw_jqb">
             <sthead>
                 <stentry>Method</stentry>
