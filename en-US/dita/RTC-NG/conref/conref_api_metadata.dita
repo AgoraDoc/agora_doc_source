@@ -4,10 +4,11 @@
     <title>API Metadata for Reuse</title>
     <body>
         <p>
-   <text id="property">
-       <text props="ios mac">Properties</text>
-       <text props="android cpp unreal bp cs web rn electron unity flutter">Attributes</text>
-   </text>
+            <text id="property">
+                <text props="ios mac">Properties</text>
+                <text props="android cpp unreal bp cs web rn electron unity flutter"
+                    >Attributes</text>
+            </text>
         </p>
     </body>
 </topic>

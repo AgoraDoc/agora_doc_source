@@ -2,7 +2,8 @@
 <!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
 <reference id="enum_simulcaststreammode">
     <title><ph keyref="SIMULCAST_STREAM_MODE"/></title>
-    <shortdesc id="short"><ph id="shortdesc">The mode in which the video stream is sent.</ph></shortdesc>
+    <shortdesc id="short"><ph id="shortdesc">The mode in which the video stream is
+        sent.</ph></shortdesc>
     <refbody>
         <section id="detailed_desc">
             <dl outputclass="since">
@@ -17,7 +18,10 @@
             <parml>
                 <plentry>
                     <pt><ph keyref="AUTO_SIMULCAST_STREAM"/></pt>
-                    <pd>-1: By default, do not send the low-quality video stream until a subscription request for the low-quality video stream is received from the receiving end, then automatically start sending low-quality video stream.</pd>
+                    <pd>-1: By default, do not send the low-quality video stream until a
+                        subscription request for the low-quality video stream is received from the
+                        receiving end, then automatically start sending low-quality video
+                        stream.</pd>
                 </plentry>
                 <plentry>
                     <pt><ph keyref="DISABLE_SIMULCAST_STREAM"/></pt>
@@ -28,5 +32,6 @@
                     <pd>1: Always send low-quality video stream.</pd>
                 </plentry>
             </parml>
-        </section></refbody>
+        </section>
+    </refbody>
 </reference>
