@@ -2,7 +2,8 @@
 <!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
 <reference id="rtc_api_data_type_unreal">
     <title><ph keyref="typedef"/></title>
-    <shortdesc id="short"><ph id="shortdesc">This page lists all the definitions of <ph keyref="class"/> and the enums for <ph keyref="platform"/>.</ph></shortdesc>
+    <shortdesc id="short"><ph id="shortdesc">This page lists all the definitions of <ph
+                keyref="class"/> and the enums for <ph keyref="platform"/>.</ph></shortdesc>
     <refbody>
         <section>
             <title><ph keyref="class"/></title>
@@ -99,7 +100,7 @@
                         <li><xref keyref="ScreenAudioParameters"/></li>
                         <li><xref keyref="ScreenVideoParameters"/></li>
                     </ul></li>
-                    <li><xref keyref="ScreenCaptureSourceInfo"/></li>
+                <li><xref keyref="ScreenCaptureSourceInfo"/></li>
                 <li><xref keyref="SegmentationProperty"/></li>
                 <li><xref keyref="SimulcastStreamConfig"/></li>
                 <li props="hide"><xref keyref="SIZE"/></li>
@@ -216,7 +217,7 @@
                         <li><xref keyref="ScreenAudioParameters"/></li>
                         <li><xref keyref="ScreenVideoParameters"/></li>
                     </ul></li>
-                    <li><xref keyref="ScreenCaptureSourceInfo"/></li>
+                <li><xref keyref="ScreenCaptureSourceInfo"/></li>
                 <li><xref keyref="SegmentationProperty"/></li>
                 <li><xref keyref="SimulcastStreamConfig"/></li>
                 <li props="hide"><xref keyref="SIZE"/></li>
@@ -383,7 +384,7 @@
                 <li><xref keyref="VOICE_BEAUTIFIER_PRESET"/></li>
                 <li><xref keyref="VOICE_CONVERSION_PRESET"/></li>
                 <li><xref keyref="WATERMARK_FIT_MODE"/></li>
-                </ul>
+            </ul>
             <ul props="bp">
                 <li><xref keyref="AREA_CODE"/></li>
                 <li><xref keyref="AUDIENCE_LATENCY_LEVEL_TYPE"/></li>
@@ -519,7 +520,7 @@
                 <li><xref keyref="VOICE_BEAUTIFIER_PRESET"/></li>
                 <li><xref keyref="VOICE_CONVERSION_PRESET"/></li>
                 <li><xref keyref="WATERMARK_FIT_MODE"/></li>
-                </ul>
+            </ul>
         </section>
     </refbody>
 </reference>

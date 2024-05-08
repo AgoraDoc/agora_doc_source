@@ -11,7 +11,8 @@
                     <dd>v4.3.1</dd>
                 </dlentry>
             </dl>
-            <note type="attention" props="cpp unreal bp flutter unity">This enumeration class applies to Android and iOS only.</note>
+            <note type="attention" props="cpp unreal bp flutter unity">This enumeration class
+                applies to Android and iOS only.</note>
         </section>
         <section id="parameters">
             <title>Enumerator</title>
@@ -30,8 +31,10 @@
                 </plentry>
                 <plentry props="ios cpp unreal bp flutter unity rn">
                     <pt><ph keyref="CAMERA_FOCAL_LENGTH_TELEPHOTO"/></pt>
-                    <pd>3: <ph props="cpp unreal bp flutter unity rn">(For iOS only)</ph> Telephoto lens.</pd>
+                    <pd>3: <ph props="cpp unreal bp flutter unity rn">(For iOS only)</ph> Telephoto
+                        lens.</pd>
                 </plentry>
             </parml>
-        </section></refbody>
+        </section>
+    </refbody>
 </reference>

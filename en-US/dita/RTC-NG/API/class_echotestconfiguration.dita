@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
 <reference id="class_echotestconfiguration">
-    <title><ph keyref="EchoTestConfiguration" /></title>
-    <shortdesc id="short"><ph id="shortdesc">The configuration of the audio and video call loop test.</ph></shortdesc>
+    <title><ph keyref="EchoTestConfiguration"/></title>
+    <shortdesc id="short"><ph id="shortdesc">The configuration of the audio and video call loop
+            test.</ph></shortdesc>
     <refbody>
         <section id="prototype">
             <p outputclass="codeblock">
-            <codeblock props="android" outputclass="language-java">public class EchoTestConfiguration {
+                <codeblock props="android" outputclass="language-java">public class EchoTestConfiguration {
   public SurfaceView view = null;
   public boolean enableAudio = true;
   public boolean enableVideo = true;
@@ -40,7 +41,7 @@
     this.channelId = null;
   }
 }</codeblock>
-            <codeblock props="ios mac" outputclass="language-objectivec">NS_SWIFT_NAME(AgoraEchoTestConfiguration)
+                <codeblock props="ios mac" outputclass="language-objectivec">NS_SWIFT_NAME(AgoraEchoTestConfiguration)
 __attribute__((visibility("default"))) @interface AgoraEchoTestConfiguration : NSObject
 @property(strong, nonatomic) VIEW_CLASS* _Nullable view NS_SWIFT_NAME(view);
 @property(assign, nonatomic) BOOL enableAudio NS_SWIFT_NAME(enableAudio);
@@ -49,7 +50,7 @@ __attribute__((visibility("default"))) @interface AgoraEchoTestConfiguration : N
 @property(copy, nonatomic) NSString* _Nonnull channelId NS_SWIFT_NAME(channelId);
 @property(assign, nonatomic) NSInteger intervalInSeconds NS_SWIFT_NAME(intervalInSeconds);
 @end</codeblock>
-            <codeblock props="cpp unreal" outputclass="language-cpp">
+                <codeblock props="cpp unreal" outputclass="language-cpp">
 struct EchoTestConfiguration {
   view_t view;
   bool enableAudio;
@@ -64,7 +65,7 @@ struct EchoTestConfiguration {
   EchoTestConfiguration()
    : view(OPTIONAL_NULLPTR), enableAudio(true), enableVideo(true), token(OPTIONAL_NULLPTR), channelId(OPTIONAL_NULLPTR), intervalInSeconds(2) {}
 };</codeblock>
-         <codeblock props="bp" outputclass="language-cpp">USTRUCT(BlueprintType)
+                <codeblock props="bp" outputclass="language-cpp">USTRUCT(BlueprintType)
 struct FEchoTestConfiguration
 {
 	GENERATED_BODY()
@@ -82,7 +83,7 @@ struct FEchoTestConfiguration
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = &quot;Agora|EchoTestConfiguration&quot;)
 	int intervalInSeconds = 2;
 };</codeblock>
-            <codeblock props="electron" outputclass="language-typescript">export class EchoTestConfiguration {
+                <codeblock props="electron" outputclass="language-typescript">export class EchoTestConfiguration {
 
   view?: any;
 
@@ -96,7 +97,7 @@ struct FEchoTestConfiguration
 
   intervalInSeconds?: number;
 }</codeblock>
-            <codeblock props="unity cs" outputclass="language-csharp">public class EchoTestConfiguration
+                <codeblock props="unity cs" outputclass="language-csharp">public class EchoTestConfiguration
     {
         public view_t view;
         public bool enableAudio;
@@ -105,7 +106,7 @@ struct FEchoTestConfiguration
         public string channelId;
         public int intervalInSeconds;
     };</codeblock>
-            <codeblock props="rn" outputclass="language-typescript">export class EchoTestConfiguration {
+                <codeblock props="rn" outputclass="language-typescript">export class EchoTestConfiguration {
 
   view?: any;
 
@@ -119,7 +120,7 @@ struct FEchoTestConfiguration
 
   intervalInSeconds?: number;
 }</codeblock>
-            <codeblock props="flutter" outputclass="language-dart">@JsonSerializable(explicitToJson: true, includeIfNull: false)
+                <codeblock props="flutter" outputclass="language-dart">@JsonSerializable(explicitToJson: true, includeIfNull: false)
 class EchoTestConfiguration {
   const EchoTestConfiguration(
       {this.view,
@@ -152,47 +153,73 @@ class EchoTestConfiguration {
 
   Map&lt;String, dynamic> toJson() => _$EchoTestConfigurationToJson(this);
 }</codeblock>
-            <codeblock props="reserve" outputclass="language-cpp"></codeblock></p>
+                <codeblock props="reserve" outputclass="language-cpp"/></p>
         </section>
         <section id="parameters">
-            <title><text conref="../conref/conref_api_metadata.dita#conref_api_metadata/property" /></title>
+            <title><text conref="../conref/conref_api_metadata.dita#conref_api_metadata/property"
+                /></title>
             <parml>
-            <plentry>
-                <pt>view</pt>
-                <pd>The view used to render the local user's video. This parameter is only applicable to scenarios testing video devices, that is, when <parmname>enableVideo</parmname> is <ph keyref="true"/>.</pd>
-            </plentry>
-            <plentry>
-                <pt>enableAudio</pt>
-                <pd>Whether to enable the audio device for the loop test:<ul>
-                    <li><codeph><ph keyref="true" /></codeph>: (Default) Enable the audio device. To test the audio device, set this parameter as <ph keyref="true" />.</li>
-                    <li><codeph><ph keyref="false" /></codeph>: Disable the audio device.</li>
-                    </ul></pd>
-            </plentry>
-            <plentry>
-                <pt>enableVideo</pt>
-                <pd props="native">Whether to enable the video device for the loop test:<ul>
-                    <li><codeph><ph keyref="true" /></codeph>: (Default) Enable the video device. To test the video device, set this parameter as <ph keyref="true" />.</li>
-                    <li><codeph><ph keyref="false" /></codeph>: Disable the video device.</li>
-                    </ul>
-                </pd>
-                <pd props="framework">Whether to enable the video device for the loop test. Currently, video device loop test is not supported. Please set this parameter to <codeph><ph keyref="false"/></codeph>.</pd>
-            </plentry>
-            <plentry>
-                <pt>token</pt>
-                <pd>The token used to secure the audio and video call loop test. If you do not enable App Certificate in Agora Console, you do not need to pass a value in this parameter; if you have enabled App Certificate in Agora Console, you must pass a token in this parameter; the <codeph>uid</codeph> used when you generate the token must be 0xFFFFFFFF, and the channel name used must be the channel name that identifies each audio and video call loop tested. For server-side token generation, see <xref keyref="guide-token"/>.</pd>
-            </plentry>
-            <plentry>
-                <pt>channelId</pt>
-                <pd>The channel name that identifies each audio and video call loop. To ensure proper loop test functionality, the channel name passed in to identify each loop test cannot be the same when users of the same project (App ID) perform audio and video call loop tests on different devices.</pd>
-            </plentry>
-            <plentry>
-                <pt>intervalInSeconds</pt>
-                <pd>Set the time interval or delay for returning the results of the audio and video loop test. The value range is [2,10], in seconds, with the default value being 2 seconds.<ul>
-                    <li>For audio loop tests, the test results will be returned according to the time interval you set.</li>
-                    <li>For video loop tests, the video will be displayed in a short time, after which the delay will gradually increase until it reaches the delay you set.</li>
-                    </ul>
-                </pd>
-            </plentry>
-            </parml> </section>
+                <plentry>
+                    <pt>view</pt>
+                    <pd>The view used to render the local user's video. This parameter is only
+                        applicable to scenarios testing video devices, that is, when
+                            <parmname>enableVideo</parmname> is <ph keyref="true"/>.</pd>
+                </plentry>
+                <plentry>
+                    <pt>enableAudio</pt>
+                    <pd>Whether to enable the audio device for the loop test:<ul>
+                            <li><codeph><ph keyref="true"/></codeph>: (Default) Enable the audio
+                                device. To test the audio device, set this parameter as <ph
+                                    keyref="true"/>.</li>
+                            <li><codeph><ph keyref="false"/></codeph>: Disable the audio
+                                device.</li>
+                        </ul></pd>
+                </plentry>
+                <plentry>
+                    <pt>enableVideo</pt>
+                    <pd props="native">Whether to enable the video device for the loop test:<ul>
+                            <li><codeph><ph keyref="true"/></codeph>: (Default) Enable the video
+                                device. To test the video device, set this parameter as <ph
+                                    keyref="true"/>.</li>
+                            <li><codeph><ph keyref="false"/></codeph>: Disable the video
+                                device.</li>
+                        </ul>
+                    </pd>
+                    <pd props="framework">Whether to enable the video device for the loop test.
+                        Currently, video device loop test is not supported. Please set this
+                        parameter to <codeph><ph keyref="false"/></codeph>.</pd>
+                </plentry>
+                <plentry>
+                    <pt>token</pt>
+                    <pd>The token used to secure the audio and video call loop test. If you do not
+                        enable App Certificate in Agora Console, you do not need to pass a value in
+                        this parameter; if you have enabled App Certificate in Agora Console, you
+                        must pass a token in this parameter; the <codeph>uid</codeph> used when you
+                        generate the token must be 0xFFFFFFFF, and the channel name used must be the
+                        channel name that identifies each audio and video call loop tested. For
+                        server-side token generation, see <xref keyref="guide-token"/>.</pd>
+                </plentry>
+                <plentry>
+                    <pt>channelId</pt>
+                    <pd>The channel name that identifies each audio and video call loop. To ensure
+                        proper loop test functionality, the channel name passed in to identify each
+                        loop test cannot be the same when users of the same project (App ID) perform
+                        audio and video call loop tests on different devices.</pd>
+                </plentry>
+                <plentry>
+                    <pt>intervalInSeconds</pt>
+                    <pd>Set the time interval or delay for returning the results of the audio and
+                        video loop test. The value range is [2,10], in seconds, with the default
+                        value being 2 seconds.<ul>
+                            <li>For audio loop tests, the test results will be returned according to
+                                the time interval you set.</li>
+                            <li>For video loop tests, the video will be displayed in a short time,
+                                after which the delay will gradually increase until it reaches the
+                                delay you set.</li>
+                        </ul>
+                    </pd>
+                </plentry>
+            </parml>
+        </section>
     </refbody>
 </reference>

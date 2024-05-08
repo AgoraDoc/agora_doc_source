@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
 <reference id="class_videoframe">
-    <title><ph keyref="VideoFrame"/></title>
-    <shortdesc id="short"><ph id="shortdesc">Configurations of the video frame.</ph></shortdesc>
-    <refbody>
-        <section id="prototype">
-            <p outputclass="codeblock">
-            <codeblock props="android" outputclass="language-java">public class VideoFrame implements RefCounted {
+  <title><ph keyref="VideoFrame"/></title>
+  <shortdesc id="short"><ph id="shortdesc">Configurations of the video frame.</ph></shortdesc>
+  <refbody>
+    <section id="prototype">
+      <p outputclass="codeblock">
+        <codeblock props="android" outputclass="language-java">public class VideoFrame implements RefCounted {
   public interface Buffer extends RefCounted {
     @CalledByNative("Buffer") int getWidth();
     @CalledByNative("Buffer") int getHeight();
@@ -241,7 +241,7 @@
     buffer.release();
   }
 }</codeblock>
-            <codeblock props="ios mac" outputclass="language-objectivec">__attribute__((visibility("default"))) @interface AgoraOutputVideoFrame : NSObject
+        <codeblock props="ios mac" outputclass="language-objectivec">__attribute__((visibility("default"))) @interface AgoraOutputVideoFrame : NSObject
 @property (nonatomic, assign) NSInteger type;
 @property (nonatomic, assign) int width;
 @property (nonatomic, assign) int height;
@@ -258,7 +258,7 @@
 @property(nonatomic, strong) NSDictionary *_Nonnull metaInfo;
 
 @end</codeblock>
-            <codeblock props="cpp unreal" outputclass="language-cpp">struct VideoFrame {
+        <codeblock props="cpp unreal" outputclass="language-cpp">struct VideoFrame {
   VideoFrame():
   type(VIDEO_PIXEL_DEFAULT),
   width(0),
@@ -300,7 +300,7 @@
   void* pixelBuffer;
   IVideoFrameMetaInfo* metaInfo;
 };</codeblock>
-         <codeblock props="bp" outputclass="language-cpp">USTRUCT(BlueprintType)
+        <codeblock props="bp" outputclass="language-cpp">USTRUCT(BlueprintType)
 struct FVideoFrame {
 
 	GENERATED_BODY()
@@ -343,7 +343,7 @@ struct FVideoFrame {
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = &quot;Agora|VideoFrame&quot;)
 	TArray&lt;float&gt; pixelBuffer;
 };</codeblock>
-            <codeblock props="electron" outputclass="language-typescript">export class VideoFrame {
+        <codeblock props="electron" outputclass="language-typescript">export class VideoFrame {
 
   type?: VideoPixelFormat;
 
@@ -378,7 +378,7 @@ struct FVideoFrame {
   matrix?: number[];
 
 }</codeblock>
-            <codeblock props="unity cs" outputclass="language-csharp">public class VideoFrame
+        <codeblock props="unity cs" outputclass="language-csharp">public class VideoFrame
     {
         public VIDEO_PIXEL_FORMAT type;
 
@@ -420,7 +420,7 @@ struct FVideoFrame {
 
         public float[] matrix;
     };</codeblock>
-            <codeblock props="rn" outputclass="language-typescript">export class VideoFrame {
+        <codeblock props="rn" outputclass="language-typescript">export class VideoFrame {
 
   type?: VideoPixelFormat;
 
@@ -455,7 +455,7 @@ struct FVideoFrame {
   matrix?: number[];
 
 }</codeblock>
-            <codeblock props="flutter" outputclass="language-dart">@JsonSerializable(explicitToJson: true, includeIfNull: false)
+        <codeblock props="flutter" outputclass="language-dart">@JsonSerializable(explicitToJson: true, includeIfNull: false)
 class VideoFrame {
   const VideoFrame(
       {this.type,
@@ -532,17 +532,20 @@ class VideoFrame {
 
   Map&lt;String, dynamic> toJson() => _$VideoFrameToJson(this);
 }</codeblock>
-            <codeblock props="reserve" outputclass="language-cpp"></codeblock></p>
-        </section>
-        <section id="detailed_desc">
-            <p>Note that the buffer provides a pointer to a pointer. This interface cannot modify the pointer of the buffer, but it can modify the content of the buffer.</p>
-        </section>
-        <section id="parameters">
-            <title><text conref="../conref/conref_api_metadata.dita#conref_api_metadata/property"/></title>
-            <parml>
+        <codeblock props="reserve" outputclass="language-cpp"/></p>
+    </section>
+    <section id="detailed_desc">
+      <p>Note that the buffer provides a pointer to a pointer. This interface cannot modify the
+        pointer of the buffer, but it can modify the content of the buffer.</p>
+    </section>
+    <section id="parameters">
+      <title><text conref="../conref/conref_api_metadata.dita#conref_api_metadata/property"
+        /></title>
+      <parml>
         <plentry props="apple cpp unreal bp unity flutter rn electron cs">
           <pt>type</pt>
-          <pd props="cpp unreal bp unity electron rn flutter cs">The pixel format. See <xref keyref="VIDEO_PIXEL_FORMAT"/>.</pd>
+          <pd props="cpp unreal bp unity electron rn flutter cs">The pixel format. See <xref
+              keyref="VIDEO_PIXEL_FORMAT"/>.</pd>
           <pd props="ios mac" conkeyref="ExternalVideoFrame/oc-format"/>
         </plentry>
         <plentry props="apple cpp unreal bp unity flutter rn electron cs">
@@ -555,17 +558,26 @@ class VideoFrame {
         </plentry>
         <plentry props="apple cpp unreal bp unity flutter rn electron cs">
           <pt>yStride</pt>
-          <pd>For YUV data, the line span of the Y buffer; for RGBA data, the total data length.<note type="attention">When dealing with video data, it is necessary to process the offset between each line of pixel data based on this parameter, otherwise it may result in image distortion.</note>
+          <pd>For YUV data, the line span of the Y buffer; for RGBA data, the total data
+              length.<note type="attention">When dealing with video data, it is necessary to process
+              the offset between each line of pixel data based on this parameter, otherwise it may
+              result in image distortion.</note>
           </pd>
         </plentry>
         <plentry props="apple cpp unreal bp unity flutter rn electron cs">
           <pt>uStride</pt>
-          <pd>For YUV data, the line span of the U buffer; for RGBA data, the value is 0.<note type="attention">When dealing with video data, it is necessary to process the offset between each line of pixel data based on this parameter, otherwise it may result in image distortion.</note>
+          <pd>For YUV data, the line span of the U buffer; for RGBA data, the value is 0.<note
+              type="attention">When dealing with video data, it is necessary to process the offset
+              between each line of pixel data based on this parameter, otherwise it may result in
+              image distortion.</note>
           </pd>
         </plentry>
         <plentry props="apple cpp unreal bp unity flutter rn electron cs">
           <pt>vStride</pt>
-          <pd>For YUV data, the line span of the V buffer; for RGBA data, the value is 0.<note type="attention">When dealing with video data, it is necessary to process the offset between each line of pixel data based on this parameter, otherwise it may result in image distortion.</note>
+          <pd>For YUV data, the line span of the V buffer; for RGBA data, the value is 0.<note
+              type="attention">When dealing with video data, it is necessary to process the offset
+              between each line of pixel data based on this parameter, otherwise it may result in
+              image distortion.</note>
           </pd>
         </plentry>
         <plentry props="apple cpp unreal bp unity flutter rn electron cs">
@@ -595,24 +607,31 @@ class VideoFrame {
         <plentry props="android">
           <pt>buffer</pt>
           <pd>
-            <note type="attention">This parameter cannot be empty; otherwise, an error  can occur.</note>Buffer data. The methods associated with this parameter are as follows:</pd>
+            <note type="attention">This parameter cannot be empty; otherwise, an error can
+              occur.</note>Buffer data. The methods associated with this parameter are as
+            follows:</pd>
           <pd>
             <ul>
               <li><codeph>getRotatedWidth</codeph>: Gets the width of the rotated video frame.</li>
-              <li><codeph>getRotatedHeight</codeph>: Gets the height of the rotated video frame.</li>
-              <li><codeph>replaceBuffer</codeph>: Replaces the data in the <codeph>buffer </codeph>with the new video frames.</li>
+              <li><codeph>getRotatedHeight</codeph>: Gets the height of the rotated video
+                frame.</li>
+              <li><codeph>replaceBuffer</codeph>: Replaces the data in the <codeph>buffer
+                </codeph>with the new video frames.</li>
               <li><codeph>retain</codeph>: Increments the reference count of the buffer by 1.</li>
-              <li><codeph>release</codeph>: Decrements the reference count of the buffer by 1. When the count reaches 0, the buffer's resources are released.</li>
+              <li><codeph>release</codeph>: Decrements the reference count of the buffer by 1. When
+                the count reaches 0, the buffer's resources are released.</li>
             </ul>
           </pd>
         </plentry>
         <plentry>
           <pt>rotation</pt>
-          <pd>The clockwise rotation of the video frame before rendering. Supported values include 0, 90, 180, and 270 degrees.</pd>
+          <pd>The clockwise rotation of the video frame before rendering. Supported values include
+            0, 90, 180, and 270 degrees.</pd>
         </plentry>
         <plentry props="apple cpp unreal bp unity flutter rn electron cs">
           <pt>renderTimeMs</pt>
-          <pd>The Unix timestamp (ms) when the video frame is rendered. This timestamp can be used to guide the rendering of the video frame. This parameter is required.</pd>
+          <pd>The Unix timestamp (ms) when the video frame is rendered. This timestamp can be used
+            to guide the rendering of the video frame. This parameter is required.</pd>
         </plentry>
         <plentry props="android">
           <pt>timestampNs</pt>
@@ -626,12 +645,14 @@ class VideoFrame {
         <plentry props="cpp unreal bp electron rn unity flutter cs">
           <pt props="cpp unreal bp electron unity rn cs">metadata_buffer</pt>
           <pt props="flutter">metadataBuffer</pt>
-          <pd>This parameter only applies to video data in Texture format. The MetaData buffer. The default value is <codeph>NULL</codeph>.</pd>
+          <pd>This parameter only applies to video data in Texture format. The MetaData buffer. The
+            default value is <codeph>NULL</codeph>.</pd>
         </plentry>
         <plentry props="cpp unreal bp electron rn unity flutter cs">
           <pt props="cpp unreal bp electron unity rn cs">metadata_size</pt>
           <pt props="flutter">metadataSize</pt>
-          <pd>This parameter only applies to video data in Texture format. The MetaData size. The default value is <codeph>0</codeph>.</pd>
+          <pd>This parameter only applies to video data in Texture format. The MetaData size. The
+            default value is <codeph>0</codeph>.</pd>
         </plentry>
         <plentry props="cpp unreal bp unity cs">
           <pt>sharedContext</pt>
@@ -643,7 +664,8 @@ class VideoFrame {
         </plentry>
         <plentry props="cpp unreal bp electron unity rn flutter cs">
           <pt>matrix</pt>
-          <pd>This parameter only applies to video data in Texture format. Incoming 4 × 4 transformational matrix. The typical value is a unit matrix.</pd>
+          <pd>This parameter only applies to video data in Texture format. Incoming 4 × 4
+            transformational matrix. The typical value is a unit matrix.</pd>
         </plentry>
         <plentry props="ios mac">
           <pt>pixelBuffer</pt>
@@ -656,28 +678,36 @@ class VideoFrame {
         <plentry props="android">
           <pt>sourceType</pt>
           <pd>When using the SDK to capture video, this indicates the type of the video source.<ul>
-            <li><parmname>kFrontCamera</parmname>: The front camera.</li>
-            <li><parmname>kBackCamera</parmname>: The rear camera.</li>
-            <li><parmname>kUnspecified</parmname>: (Default) The video source type is unknown.</li>
+              <li><parmname>kFrontCamera</parmname>: The front camera.</li>
+              <li><parmname>kBackCamera</parmname>: The rear camera.</li>
+              <li><parmname>kUnspecified</parmname>: (Default) The video source type is
+                unknown.</li>
             </ul></pd>
         </plentry>
         <plentry props="android">
           <pt>sampleAspectRatio</pt>
-          <pd>The aspect ratio of a single pixel, which is the ratio of the width to the height of each pixel.</pd>
+          <pd>The aspect ratio of a single pixel, which is the ratio of the width to the height of
+            each pixel.</pd>
         </plentry>
         <plentry props="hide">
           <pt>alphaBuffer</pt>
           <pd>
-            <p>Indicates the alpha channel data output by the portrait segmentation algorithm, which is consistent with the size of the video frame. The value range of each pixel is [0,255], where 0 represents the background; 255 represents the foreground (portrait).</p>
-            <p>In the costom video renderer scenario, you can use this parameter to render the video background into various effects, such as: transparent, solid color, picture, video and so on.<note>To use this parameter, contact <xref keyref="ticket-link"/>.</note></p>
+            <p>Indicates the alpha channel data output by the portrait segmentation algorithm, which
+              is consistent with the size of the video frame. The value range of each pixel is
+              [0,255], where 0 represents the background; 255 represents the foreground
+              (portrait).</p>
+            <p>In the costom video renderer scenario, you can use this parameter to render the video
+              background into various effects, such as: transparent, solid color, picture, video and
+              so on.<note>To use this parameter, contact <xref keyref="ticket-link"/>.</note></p>
           </pd>
         </plentry>
         <plentry>
           <pt>metaInfo</pt>
           <pd>
-            <p>The meta information in the video frame. To use this parameter, please <xref keyref="ticket-link"/>.</p>
+            <p>The meta information in the video frame. To use this parameter, please <xref
+                keyref="ticket-link"/>.</p>
           </pd>
         </plentry>
       </parml></section>
-    </refbody>
+  </refbody>
 </reference>

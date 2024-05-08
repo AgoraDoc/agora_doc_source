@@ -31,7 +31,8 @@
                     <dd>v4.3.0</dd>
                 </dlentry>
             </dl>
-            <p>Android 原生的 <xref keyref="attribute-link"/> 类用于控制音频流的播放属性。你可以通过调用该方法，直接设置 <apiname keyref="attribute-link"/> 类中的各项参数，从而灵活控制音频流的播放效果。</p>
+            <p>Android 原生的 <xref keyref="attribute-link"/> 类用于控制音频流的播放属性。你可以通过调用该方法，直接设置 <apiname
+                    keyref="attribute-link"/> 类中的各项参数，从而灵活控制音频流的播放效果。</p>
             <note>
                 <ul>
                     <li>该方法主要应用于 Android 车机系统。</li>
@@ -41,7 +42,8 @@
         </section>
         <section id="scenario">
             <title>适用场景</title>
-            <p>在汽车处于哨兵模式场景下，当车主通过 App 监控到汽车周围有异常情况时，可直接发起语音喊话。此时可以通过调用该方法将音频路由设置为车外喇叭，将远程喊话通过车外喇叭播放。</p>
+            <p>在汽车处于哨兵模式场景下，当车主通过 App
+                监控到汽车周围有异常情况时，可直接发起语音喊话。此时可以通过调用该方法将音频路由设置为车外喇叭，将远程喊话通过车外喇叭播放。</p>
         </section>
         <section id="parameters">
             <title>参数</title>
@@ -54,10 +56,12 @@
         </section>
         <section id="return_values">
             <title><ph keyref="return-section-title"/></title>
-            <p props="flutter">方法成功调用时，无返回值；方法调用失败时，会抛出 <xref keyref="AgoraRtcException"/> 异常，你需要捕获异常并进行处理。</p>
+            <p props="flutter">方法成功调用时，无返回值；方法调用失败时，会抛出 <xref keyref="AgoraRtcException"/>
+                异常，你需要捕获异常并进行处理。</p>
             <ul>
                 <li props="native electron unity rn">0: 方法调用成功。</li>
-                <li>&lt; 0: 方法调用失败。<ph props="cn">详见<xref keyref="error-code-link"/>了解详情和解决建议。</ph></li>
+                <li>&lt; 0: 方法调用失败。<ph props="cn">详见<xref keyref="error-code-link"
+                    />了解详情和解决建议。</ph></li>
             </ul>
         </section>
     </refbody>
